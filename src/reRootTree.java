@@ -27,14 +27,20 @@ public class reRootTree {
 
     private static Node moveRoot(Node node) {
         Node root = new Node(node.getName(),null);
+        String name = node.getName();
         Node workingNode = node;
+        Node addingNode = root;
         while(workingNode.getParent() != null){
             workingNode = workingNode.getParent();
+            Node parent = new Node(workingNode.getName(),addingNode);
+            addingNode.addChild(parent);
+            addingNode = parent;
             for(int i=0; i<workingNode.getChildren().size();i++){
                 Node child = workingNode.getChildren().get(i);
-                if(!existsInSubTree(child,node.getName()))
-                    root.addChild(child);
+                if(!existsInSubTree(child,name))
+                    addingNode.addChild(child);
             }
+
         }
         return root;
     }
@@ -56,7 +62,7 @@ public class reRootTree {
             exists = true;
         if(node.getChildren().size()>0)
             for(int i=0; i<node.getChildren().size();i++)
-                if(existsInSubTree(node.getChildren().get(i),nodeName))
+                if(existsInSubTree(node.getChildren().get(i), nodeName))
                     exists=true;
         return exists;
     }

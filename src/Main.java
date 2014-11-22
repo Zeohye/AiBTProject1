@@ -36,6 +36,9 @@ public class Main {
         iter.numberRenameing(tree2);
 
         //distance between trees
-        int i = 0;
+        iter.intervals(tree1);
+        System.out.println("break");
+        iter.intervals(tree2);
+        System.out.println(iter.getInterval().size());
     }
 }

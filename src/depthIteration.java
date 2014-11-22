@@ -34,12 +34,12 @@ public class depthIteration {
         for(int i=0; i < node.getChildren().size();i++)
             pair.combine(_intervals(node.getChildren().get(i), new Pair()));
         if(node.getName().equals("InternalNode")){
-            if(pair.max-pair.min+1==pair.leafs)
-                if(intervals.contains("Max:"+pair.max+"Min:"+pair.min))
-                    intervals.remove("Max:"+pair.max+"Min:"+pair.min);
-                else
-                    intervals.add("Max:"+pair.max+"Min:"+pair.min);
-            System.out.println("Max:"+pair.max+"Min:"+pair.min+" leafs "+pair.leafs);
+            //if(pair.max-pair.min+1==pair.leafs)
+            String name = "Max:"+pair.max+"Min:"+pair.min + "Leafs:"+pair.leafs;
+            if(intervals.contains(name))
+                intervals.remove(name);
+            else
+                intervals.add(name);
         }else{
             if(node.getValue()>pair.max)
                 pair.max = node.getValue();

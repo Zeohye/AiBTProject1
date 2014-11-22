@@ -26,7 +26,7 @@ public class Main {
         /***Start of days algorithm***/
 
         //Make the trees rooted on the same node.
-        tree1 = reRootTree.reRoot(tree1,"");
+        tree1 = reRootTree.reRoot(tree1,"seq9");
         tree2 = reRootTree.reRoot(tree2,tree1.getName());
 
         //Depth first numbering of the first tree
@@ -37,8 +37,8 @@ public class Main {
 
         //distance between trees
         iter.intervals(tree1);
-        System.out.println("break");
         iter.intervals(tree2);
         System.out.println(iter.getInterval().size());
+
     }
 }

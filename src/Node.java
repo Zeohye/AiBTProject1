@@ -6,8 +6,6 @@ import java.util.ArrayList;
 public class Node {
     private String name;
     private int value;
-    Boolean visitedLeft = false;
-    Boolean visitedRight= false;
     private Node parent;
     private ArrayList<Node> children;
     public Node(String name,Node parent){

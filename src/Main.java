@@ -24,7 +24,10 @@ public class Main {
             return;
         }
 
+        tree1 = reRootTree.reRoot(tree1,"");
+        tree2 = reRootTree.reRoot(tree2,tree1.getName());
 
         //distance between trees
+
     }
 }

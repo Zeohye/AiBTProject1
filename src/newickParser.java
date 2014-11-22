@@ -15,6 +15,7 @@ public class newickParser {
             data +=line;
         }
         if(br != null)br.close();
+        data = data.replace("'","");
         Node root = new Node("InternalNode",null);
         createTree(data.substring(1, data.length() - 2), root);
         return root;

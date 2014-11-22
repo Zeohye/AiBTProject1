@@ -23,11 +23,19 @@ public class Main {
             System.out.println("Error parsing trees!!!");
             return;
         }
+        /***Start of days algorithm***/
 
+        //Make the trees rooted on the same node.
         tree1 = reRootTree.reRoot(tree1,"");
         tree2 = reRootTree.reRoot(tree2,tree1.getName());
 
-        //distance between trees
+        //Depth first numbering of the first tree
+        depthIteration iter = new depthIteration();
+        iter.firstNumbering(tree1);
+        //Number the tree2 nodes the same as the nodes in tree1
+        iter.numberRenameing(tree2);
 
+        //distance between trees
+        int i = 0;
     }
 }

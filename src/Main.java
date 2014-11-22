@@ -26,7 +26,7 @@ public class Main {
         /***Start of days algorithm***/
 
         //Make the trees rooted on the same node.
-        tree1 = reRootTree.reRoot(tree1,"seq9");
+        tree1 = reRootTree.reRoot(tree1,"");
         tree2 = reRootTree.reRoot(tree2,tree1.getName());
 
         //Depth first numbering of the first tree

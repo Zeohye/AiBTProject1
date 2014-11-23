@@ -1,10 +1,10 @@
 /**
- * Created by Gamer PRO on 11/22/2014.
+ * Created by Nils Henning on 11/22/2014.
  */
 public class reRootTree {
     public static Node reRoot(Node root,String nodeName){
         boolean chooseFirst = false;
-        if(nodeName =="")
+        if(nodeName.equals(""))
             chooseFirst=true;
 
         Node node = root;

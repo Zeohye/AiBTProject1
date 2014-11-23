@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AiBT Project 1:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AiBT_Project_1_jar</output-path>
+    <root id="archive" name="AiBT Project 1.jar">
+      <element id="module-output" name="AiBT Project 1" />
+    </root>
+  </artifact>
+</component>

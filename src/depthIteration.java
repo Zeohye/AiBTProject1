@@ -13,8 +13,9 @@ public class depthIteration {
         for(int i=0; i < node.getChildren().size();i++)
             firstNumbering(node.getChildren().get(i));
         if(node.getChildren().size()==0) {
-            node.setValue(counter++);
-            values.put(node.getName(),node.getValue());
+            node.setValue(counter);
+            values.put(node.getName(),counter);
+            counter++;
         }
     }
 
